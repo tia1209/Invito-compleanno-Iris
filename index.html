@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invito 17° Iris</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Playfair+Display&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #5f2c82, #2b5876);
+      color: white;
+    }
+
+    .card {
+      backdrop-filter: blur(15px);
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      opacity: 0.8;
+      margin-bottom: 20px;
+    }
+
+    .name {
+      font-size: 22px;
+      margin: 15px 0;
+      font-weight: 500;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 14px;
+      border-radius: 12px;
+      font-size: 15px;
+      transition: 0.3s;
+      border: 1px solid rgba(255,255,255,0.3);
+      color: white;
+      background: transparent;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .btn:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    .message {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: 0.4s ease;
+      font-size: 13px;
+      margin-top: 15px;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .message.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>Sei invitato</h1>
+
+    <div class="subtitle">a festeggiare un momento speciale</div>
+
+    <div class="name">17° compleanno di Iris</div>
+
+    <div class="subtitle">
+      Una serata speciale, pensata per essere condivisa con le persone più importanti
+    </div>
+
+    <div class="buttons">
+      <a class="btn" href="https://chat.whatsapp.com/GI2uePqRX1K2Cu4dLC1Gk7?mode=gi_t">
+        Unisciti al gruppo
+      </a>
+
+      <a class="btn" href="https://maps.app.goo.gl/coNEL5KcRjxZD5jw9">
+        Scopri la location
+      </a>
+
+      <button class="btn" onclick="showMessage()">
+        Non potrò esserci
+      </button>
+    </div>
+
+    <div class="message" id="message">
+      Mi dispiace che non ci sarai 💔
+    </div>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById("message").classList.add("show");
+    }
+  </script>
+
+</body>
+</html>
